@@ -81,9 +81,14 @@ nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between
 
 /* about */
 .about{scroll-margin-top:80px;background:var(--paper)}
-.about .wrap{padding-top:112px;padding-bottom:112px;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
-.about .section-title{flex:1 1 320px;margin:0}
-.about p{flex:2 1 560px;min-width:0;margin:0;font-weight:200;font-size:clamp(24px,2.4vw,32px);line-height:1.45;color:var(--ink)}
+.about .wrap{padding-top:112px;padding-bottom:112px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:64px;align-items:start}
+.about .section-title{margin:0 0 24px}
+.about .lead{margin:0;font-weight:200;font-size:clamp(24px,2.4vw,30px);line-height:1.45;color:var(--ink)}
+.about-points{display:flex;flex-direction:column;gap:16px}
+.about-point{background:#fff;border:1px solid #D3DFEE;border-radius:16px;padding:28px 32px;display:flex;gap:20px;align-items:flex-start}
+.about-point svg{flex:none;margin-top:2px}
+.about-point h3{font-weight:400;font-size:20px;color:var(--ink);margin:0 0 6px}
+.about-point p{margin:0;font-size:17px}
 
 /* contact */
 .contact{scroll-margin-top:64px;background:var(--navy-3);color:var(--on-dark-2)}
@@ -120,6 +125,8 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
   .section-head{margin-bottom:40px}
   .hero .wrap{padding-top:88px;padding-bottom:80px}
   .door{padding:32px}
+  .about .wrap{gap:40px}
+  .about-point{padding:22px 22px;gap:16px}
   .direct{border-left:0;padding-left:0;border-top:1px solid #1F3E66;padding-top:24px}
 }
 </style>
@@ -201,8 +208,24 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
 
   <section class="about" id="about">
     <div class="wrap">
-      <h2 class="section-title">About Novozis</h2>
-      <p>Novozis brings together hands-on security testing experience and years of work with nonprofits and mission-driven organizations. We believe good security should be understandable, affordable, and within reach of everyone, not just large companies.</p>
+      <div>
+        <h2 class="section-title">About Novozis</h2>
+        <p class="lead">We believe good security should be understandable, affordable, and within reach of everyone, not just large companies.</p>
+      </div>
+      <div class="about-points">
+        <div class="about-point">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1A62C4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div><h3>Hands-on security expertise</h3><p>Years of real-world security testing across cloud and enterprise environments.</p></div>
+        </div>
+        <div class="about-point">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1A62C4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+          <div><h3>Mission-driven roots</h3><p>Deep experience working with nonprofits and community organizations, so we understand lean teams and real constraints.</p></div>
+        </div>
+        <div class="about-point">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1A62C4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+          <div><h3>Focused on results</h3><p>A background in program evaluation means we check that fixes and training actually stick, not just that a report was delivered.</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
