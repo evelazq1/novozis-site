@@ -41,10 +41,10 @@ nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between
 .brand-text{display:flex;flex-direction:column;line-height:1}
 .brand-name{font-weight:400;font-size:26px;color:#fff;letter-spacing:.01em}
 .brand-sub{font-weight:300;font-size:13px;color:#BFD3EA;margin-top:4px;letter-spacing:.02em}
-.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:400}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:400;margin-left:auto}
 .nav-links a:not(.btn){text-decoration:none;color:#DCE7F4}
 .nav-links a:not(.btn):hover{color:var(--cyan)}
-.nav-links .btn{min-height:44px;padding:11px 20px}
+.nav-cta.btn{min-height:44px;padding:11px 20px;font-size:15px}
 
 /* hero */
 .hero{border-bottom:1px solid var(--line-dark)}
@@ -56,10 +56,16 @@ nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between
 
 /* doors */
 .doors{background:var(--mist)}
-.doors .wrap{padding-top:104px;padding-bottom:104px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:24px}
+.doors .wrap{padding-top:104px;padding-bottom:104px}
+.doors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:24px}
+.section-head{margin-bottom:56px;max-width:720px}
+.section-title{font-weight:300;font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-.015em;color:var(--ink);margin:0 0 14px}
+.section-head p{margin:0;font-size:19px}
+.on-dark .section-title{color:#fff}
+.on-dark .section-head p{color:var(--on-dark)}
 .door{scroll-margin-top:96px;background:#fff;border:1px solid #D3DFEE;border-radius:20px;padding:48px;display:flex;flex-direction:column;gap:20px}
 .door .eyebrow{color:var(--accent)}
-.door h2{font-weight:300;font-size:36px;line-height:1.15;color:var(--ink);margin:0}
+.door h3{font-weight:300;font-size:36px;line-height:1.15;color:var(--ink);margin:0}
 .door p{margin:0}
 .tags{display:flex;flex-wrap:wrap;gap:8px;font-size:14px}
 .tags span{border:1px solid #D3DFEE;border-radius:999px;padding:6px 14px;color:var(--ink)}
@@ -67,7 +73,8 @@ nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between
 
 /* principles */
 .principles{background:var(--navy-2)}
-.principles .wrap{padding-top:104px;padding-bottom:104px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:48px}
+.principles .wrap{padding-top:104px;padding-bottom:104px}
+.principles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:48px}
 .principles .rule{width:36px;height:2px;background:var(--cyan);margin-bottom:24px}
 .principles h3{font-weight:400;font-size:22px;color:#fff;margin:0 0 10px}
 .principles p{margin:0;font-size:17px;color:var(--on-dark)}
@@ -75,7 +82,7 @@ nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between
 /* about */
 .about{scroll-margin-top:80px;background:var(--paper)}
 .about .wrap{padding-top:112px;padding-bottom:112px;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
-.about .eyebrow{flex:1 1 320px;color:var(--accent);padding-top:12px}
+.about .section-title{flex:1 1 320px;margin:0}
 .about p{flex:2 1 560px;min-width:0;margin:0;font-weight:200;font-size:clamp(24px,2.4vw,32px);line-height:1.45;color:var(--ink)}
 
 /* contact */
@@ -93,6 +100,7 @@ textarea{resize:vertical;min-height:110px}
 input:focus,select:focus,textarea:focus{outline:2px solid var(--cyan);outline-offset:1px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+button.btn{-webkit-appearance:none;appearance:none;line-height:inherit}
 .status{font-size:15px;margin:0}
 .status.ok{color:#7EE2C0}.status.err{color:#FFB4A8}
 .fine{font-size:13px;color:#8FA7C4;margin:0}
@@ -106,7 +114,10 @@ footer .name{color:#fff;font-weight:400;font-size:18px}
 footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
 
 @media (max-width:640px){
-  .nav-links{gap:18px}
+  nav{row-gap:12px}
+  .nav-cta{order:2}
+  .nav-links{order:3;width:100%;margin-left:0;justify-content:center;gap:28px;padding-top:4px}
+  .section-head{margin-bottom:40px}
   .hero .wrap{padding-top:88px;padding-bottom:80px}
   .door{padding:32px}
   .direct{border-left:0;padding-left:0;border-top:1px solid #1F3E66;padding-top:24px}
@@ -125,8 +136,8 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
       <a href="#orgs">Organizations</a>
       <a href="#individuals">Individuals</a>
       <a href="#about">About</a>
-      <a class="btn btn-primary" href="#contact">Get in touch</a>
     </div>
+    <a class="btn btn-primary nav-cta" href="#contact">Get in touch</a>
   </nav>
 </header>
 
@@ -143,11 +154,16 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
     </div>
   </section>
 
-  <section class="doors" aria-label="Who we help">
+  <section class="doors" aria-labelledby="doors-title">
     <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title" id="doors-title">Who we work with</h2>
+        <p>We partner with organizations and individuals who want security that's clear and practical.</p>
+      </div>
+      <div class="doors-grid">
       <article class="door" id="orgs">
         <div class="eyebrow">For organizations</div>
-        <h2>Businesses &amp; nonprofits</h2>
+        <h3>Businesses &amp; nonprofits</h3>
         <p>We look at your cloud, AI tools, and internet-facing systems the way an attacker would. Then we give you a short, prioritized plan your team can act on.</p>
         <div class="tags"><span>Cloud &amp; AI security</span><span>Security testing</span><span>Policy &amp; governance</span></div>
         <div class="cta">
@@ -157,7 +173,7 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
       </article>
       <article class="door" id="individuals">
         <div class="eyebrow">For individuals</div>
-        <h2>You &amp; your family</h2>
+        <h3>You &amp; your family</h3>
         <p>Through educational sessions and personal security reviews, we explain today's online risks in plain language and help you make your accounts, devices, and personal information safer.</p>
         <div class="tags"><span>Educational sessions</span><span>Personal security reviews</span></div>
         <div class="cta">
@@ -165,20 +181,27 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
+      </div>
     </div>
   </section>
 
-  <section class="principles" aria-label="How we work">
+  <section class="principles on-dark" aria-labelledby="principles-title">
     <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title" id="principles-title">How we work</h2>
+        <p>Whether we're working with a company or a family, you can expect the same approach.</p>
+      </div>
+      <div class="principles-grid">
       <div><div class="rule"></div><h3>Plain language</h3><p>No jargon, no scare tactics. You'll understand what we found and why it matters.</p></div>
       <div><div class="rule"></div><h3>Practical next steps</h3><p>Every engagement ends with a short list of what to fix first.</p></div>
       <div><div class="rule"></div><h3>Direct access</h3><p>A small, senior team. You work with the founders, start to finish.</p></div>
+      </div>
     </div>
   </section>
 
   <section class="about" id="about">
     <div class="wrap">
-      <div class="eyebrow">About Novozis</div>
+      <h2 class="section-title">About Novozis</h2>
       <p>Novozis brings together hands-on security testing experience and years of work with nonprofits and mission-driven organizations. We believe good security should be understandable, affordable, and within reach of everyone, not just large companies.</p>
     </div>
   </section>
@@ -208,7 +231,8 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
           </label>
           <label>Anything we should know? (optional)<textarea name="message" rows="3"></textarea></label>
           <div class="form-foot">
-            <button type="submit" class="btn btn-primary" id="submit-btn">Send</button>
+            <button type="submit" class="btn btn-primary" id="submit-btn">Send message
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             <p class="status" id="form-status" role="status" aria-live="polite"></p>
           </div>
           <p class="fine">We only use your details to reply to you. We never share them.</p>
