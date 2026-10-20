@@ -81,12 +81,13 @@ nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between
 
 /* about */
 .about{scroll-margin-top:80px;background:var(--paper)}
-.about .wrap{padding-top:112px;padding-bottom:112px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:64px;align-items:start}
-.about .section-title{margin:0 0 24px}
-.about .lead{margin:0;font-weight:200;font-size:clamp(24px,2.4vw,30px);line-height:1.45;color:var(--ink)}
-.about-points{display:flex;flex-direction:column;gap:16px}
-.about-point{background:#fff;border:1px solid #D3DFEE;border-radius:16px;padding:28px 32px;display:flex;gap:20px;align-items:flex-start}
-.about-point svg{flex:none;margin-top:2px}
+.about .wrap{padding-top:112px;padding-bottom:112px}
+.about-head{max-width:760px;margin-bottom:56px}
+.about .section-title{margin:0 0 16px}
+.about .lead{margin:0;font-weight:200;font-size:clamp(22px,2.2vw,28px);line-height:1.45;color:var(--ink)}
+.about-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px}
+.about-point{background:#fff;border:1px solid #D3DFEE;border-radius:20px;padding:36px 32px;display:flex;flex-direction:column;gap:18px}
+.about-point svg{flex:none}
 .about-point h3{font-weight:400;font-size:20px;color:var(--ink);margin:0 0 6px}
 .about-point p{margin:0;font-size:17px}
 
@@ -125,8 +126,8 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
   .section-head{margin-bottom:40px}
   .hero .wrap{padding-top:88px;padding-bottom:80px}
   .door{padding:32px}
-  .about .wrap{gap:40px}
-  .about-point{padding:22px 22px;gap:16px}
+  .about-head{margin-bottom:40px}
+  .about-point{padding:28px 24px;gap:14px}
   .direct{border-left:0;padding-left:0;border-top:1px solid #1F3E66;padding-top:24px}
 }
 </style>
@@ -208,7 +209,7 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
 
   <section class="about" id="about">
     <div class="wrap">
-      <div>
+      <div class="about-head">
         <h2 class="section-title">About Novozis</h2>
         <p class="lead">We believe good security should be understandable, affordable, and within reach of everyone, not just large companies.</p>
       </div>
