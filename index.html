@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novozis Cyber Security | Clear, practical cybersecurity</title>
+<meta name="description" content="Novozis helps businesses, nonprofits, and individuals understand their online risks and take practical steps to stay safe.">
+<meta property="og:title" content="Novozis Cyber Security">
+<meta property="og:description" content="Clear, practical cybersecurity for organizations and the people they serve.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://novozis.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;300;400;500&display=swap">
+<style>
+:root{
+  --navy:#0B2545; --navy-2:#102F57; --navy-3:#081C38; --navy-4:#06162D;
+  --ink:#0D2F5E; --body:#3C4B61; --line-dark:#1C3A63;
+  --accent:#1A62C4; --cyan:#5CD3E6; --mist:#E9F0F8; --paper:#F5F8FC;
+  --on-dark:#B9CBE2; --on-dark-2:#C6D6EA;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);font-family:'Lexend',system-ui,sans-serif;font-weight:300;color:var(--body);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:#7FC8F5}a:hover{color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding-left:24px;padding-right:24px}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:14px 26px;border-radius:999px;text-decoration:none;font:inherit;font-weight:400;cursor:pointer;border:0;transition:filter .15s,background .15s}
+.btn:hover{filter:brightness(1.12)}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{color:#fff}
+.btn-ghost{border:1px solid #3A5D8A;color:#fff;background:transparent}.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-navy{background:var(--ink);color:#fff}.btn-navy:hover{color:#fff}
+.btn-outline{border:1px solid var(--ink);color:var(--ink);background:transparent}.btn-outline:hover{background:#EAF1FA;color:var(--ink)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(11,37,69,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line-dark)}
+nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-text{display:flex;flex-direction:column;line-height:1}
+.brand-name{font-weight:400;font-size:26px;color:#fff;letter-spacing:.01em}
+.brand-sub{font-weight:300;font-size:13px;color:#BFD3EA;margin-top:4px;letter-spacing:.02em}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:28px;font-size:15px;font-weight:400}
+.nav-links a:not(.btn){text-decoration:none;color:#DCE7F4}
+.nav-links a:not(.btn):hover{color:var(--cyan)}
+.nav-links .btn{min-height:44px;padding:11px 20px}
+
+/* hero */
+.hero{border-bottom:1px solid var(--line-dark)}
+.hero .wrap{padding-top:136px;padding-bottom:120px}
+.hero .eyebrow{color:var(--cyan);margin-bottom:28px}
+.hero h1{font-weight:200;font-size:clamp(40px,6vw,80px);line-height:1.06;letter-spacing:-.02em;color:#fff;margin:0 0 32px;max-width:980px}
+.hero p{font-size:21px;margin:0 0 44px;max-width:620px;color:var(--on-dark)}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+
+/* doors */
+.doors{background:var(--mist)}
+.doors .wrap{padding-top:104px;padding-bottom:104px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:24px}
+.door{scroll-margin-top:96px;background:#fff;border:1px solid #D3DFEE;border-radius:20px;padding:48px;display:flex;flex-direction:column;gap:20px}
+.door .eyebrow{color:var(--accent)}
+.door h2{font-weight:300;font-size:36px;line-height:1.15;color:var(--ink);margin:0}
+.door p{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;font-size:14px}
+.tags span{border:1px solid #D3DFEE;border-radius:999px;padding:6px 14px;color:var(--ink)}
+.door .cta{margin-top:auto;padding-top:16px}
+
+/* principles */
+.principles{background:var(--navy-2)}
+.principles .wrap{padding-top:104px;padding-bottom:104px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:48px}
+.principles .rule{width:36px;height:2px;background:var(--cyan);margin-bottom:24px}
+.principles h3{font-weight:400;font-size:22px;color:#fff;margin:0 0 10px}
+.principles p{margin:0;font-size:17px;color:var(--on-dark)}
+
+/* about */
+.about{scroll-margin-top:80px;background:var(--paper)}
+.about .wrap{padding-top:112px;padding-bottom:112px;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.about .eyebrow{flex:1 1 320px;color:var(--accent);padding-top:12px}
+.about p{flex:2 1 560px;min-width:0;margin:0;font-weight:200;font-size:clamp(24px,2.4vw,32px);line-height:1.45;color:var(--ink)}
+
+/* contact */
+.contact{scroll-margin-top:64px;background:var(--navy-3);color:var(--on-dark-2)}
+.contact .wrap{padding-top:112px;padding-bottom:112px}
+.contact h2{font-weight:200;font-size:clamp(36px,4.6vw,60px);line-height:1.08;letter-spacing:-.015em;color:#fff;margin:0 0 16px}
+.contact .lede{margin:0 0 56px;font-size:19px;max-width:560px}
+.contact-grid{display:flex;flex-wrap:wrap;gap:40px}
+form{flex:2 1 520px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.row{display:flex;flex-wrap:wrap;gap:16px}
+.row label{flex:1 1 200px}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:400;color:#fff}
+input,select,textarea{font:inherit;font-weight:300;font-size:16px;padding:12px 14px;border:1px solid #2C4C78;background:#0F2A4E;color:#fff;border-radius:10px;min-height:46px;width:100%}
+textarea{resize:vertical;min-height:110px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--cyan);outline-offset:1px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.status{font-size:15px;margin:0}
+.status.ok{color:#7EE2C0}.status.err{color:#FFB4A8}
+.fine{font-size:13px;color:#8FA7C4;margin:0}
+.direct{flex:1 1 260px;min-width:0;display:flex;flex-direction:column;gap:10px;font-size:16px;border-left:1px solid #1F3E66;padding-left:32px}
+.direct a{text-decoration:none}
+.direct strong{color:#fff;font-weight:400;margin-bottom:4px}
+
+footer{background:var(--navy-4);color:#9FB5D1;font-size:14px}
+footer .wrap{padding-top:32px;padding-bottom:32px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+footer .name{color:#fff;font-weight:400;font-size:18px}
+footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
+
+@media (max-width:640px){
+  .nav-links{gap:18px}
+  .hero .wrap{padding-top:88px;padding-bottom:80px}
+  .door{padding:32px}
+  .direct{border-left:0;padding-left:0;border-top:1px solid #1F3E66;padding-top:24px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a class="brand" href="#top" aria-label="Novozis Cyber Security, home">
+      <svg width="52" height="36" viewBox="68 0 584 405" aria-hidden="true"><defs><clipPath id="nzgc"><circle cx="360" cy="153" r="153"></circle><rect x="68" y="100" width="584" height="305" rx="152.5"></rect></clipPath><linearGradient id="nzg" gradientUnits="userSpaceOnUse" x1="90" y1="400" x2="640" y2="120"><stop offset="0" stop-color="#0868DA"></stop><stop offset="0.35" stop-color="#0A55B8"></stop><stop offset="0.62" stop-color="#0D4A92"></stop><stop offset="1" stop-color="#0B3F80"></stop></linearGradient><linearGradient id="nzgt" gradientUnits="userSpaceOnUse" x1="330" y1="0" x2="420" y2="230"><stop offset="0" stop-color="#19C6DA"></stop><stop offset="1" stop-color="#19C6DA" stop-opacity="0"></stop></linearGradient><linearGradient id="nzgl" gradientUnits="userSpaceOnUse" x1="70" y1="150" x2="300" y2="320"><stop offset="0" stop-color="#13A6EC" stop-opacity="0.9"></stop><stop offset="1" stop-color="#13A6EC" stop-opacity="0"></stop></linearGradient></defs><g clip-path="url(#nzgc)"><rect x="68" y="0" width="584" height="405" fill="url(#nzg)"></rect><rect x="68" y="0" width="584" height="405" fill="url(#nzgl)"></rect><rect x="68" y="0" width="584" height="405" fill="url(#nzgt)"></rect></g><path fill="#FFFFFF" d="M268 338V152h45v22c18-20 40-28 66-28 46 0 69 30 69 78v114h-45V230c0-30-14-46-40-46-30 0-50 22-50 54v100z"></path></svg>
+      <span class="brand-text"><span class="brand-name">novozis</span><span class="brand-sub">Cyber Security</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#orgs">Organizations</a>
+      <a href="#individuals">Individuals</a>
+      <a href="#about">About</a>
+      <a class="btn btn-primary" href="#contact">Get in touch</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Cyber security consulting</div>
+      <h1>Clear, practical cybersecurity for organizations and the people they serve.</h1>
+      <p>We help businesses, nonprofits, and individuals understand their online risks and take practical steps to stay safe.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Start a conversation</a>
+        <a class="btn btn-ghost" href="#orgs">How we work with you</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="doors" aria-label="Who we help">
+    <div class="wrap">
+      <article class="door" id="orgs">
+        <div class="eyebrow">For organizations</div>
+        <h2>Businesses &amp; nonprofits</h2>
+        <p>We look at your cloud, AI tools, and internet-facing systems the way an attacker would. Then we give you a short, prioritized plan your team can act on.</p>
+        <div class="tags"><span>Cloud &amp; AI security</span><span>Security testing</span><span>Policy &amp; governance</span></div>
+        <div class="cta">
+          <a class="btn btn-navy" href="#contact" data-inquiry="business">Book a free 30-minute consultation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+      <article class="door" id="individuals">
+        <div class="eyebrow">For individuals</div>
+        <h2>You &amp; your family</h2>
+        <p>Through educational sessions and personal security reviews, we explain today's online risks in plain language and help you make your accounts, devices, and personal information safer.</p>
+        <div class="tags"><span>Educational sessions</span><span>Personal security reviews</span></div>
+        <div class="cta">
+          <a class="btn btn-outline" href="#contact" data-inquiry="individual">Ask how we can help
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="principles" aria-label="How we work">
+    <div class="wrap">
+      <div><div class="rule"></div><h3>Plain language</h3><p>No jargon, no scare tactics. You'll understand what we found and why it matters.</p></div>
+      <div><div class="rule"></div><h3>Practical next steps</h3><p>Every engagement ends with a short list of what to fix first.</p></div>
+      <div><div class="rule"></div><h3>Direct access</h3><p>A small, senior team. You work with the founders, start to finish.</p></div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="eyebrow">About Novozis</div>
+      <p>Novozis brings together hands-on security testing experience and years of work with nonprofits and mission-driven organizations. We believe good security should be understandable, affordable, and within reach of everyone, not just large companies.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Let's talk.</h2>
+      <p class="lede">Tell us a little about you and we'll suggest the right starting point.</p>
+      <div class="contact-grid">
+        <!-- Form submissions are delivered by Web3Forms (web3forms.com) to the email linked to the access key below. -->
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New inquiry from novozis.com">
+          <input type="hidden" name="from_name" value="Novozis website">
+          <div class="hp" aria-hidden="true"><label>Leave this empty<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+          <div class="row">
+            <label>Name<input type="text" name="name" autocomplete="name" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          </div>
+          <label>I'm reaching out for
+            <select name="inquiry_type" id="inquiry">
+              <option value="business">My business (free 30-minute consultation)</option>
+              <option value="nonprofit">My nonprofit (free 30-minute consultation)</option>
+              <option value="individual">Myself or my family</option>
+              <option value="group">A group session (community, workplace)</option>
+            </select>
+          </label>
+          <label>Anything we should know? (optional)<textarea name="message" rows="3"></textarea></label>
+          <div class="form-foot">
+            <button type="submit" class="btn btn-primary" id="submit-btn">Send</button>
+            <p class="status" id="form-status" role="status" aria-live="polite"></p>
+          </div>
+          <p class="fine">We only use your details to reply to you. We never share them.</p>
+        </form>
+        <div class="direct">
+          <strong>Or reach us directly</strong>
+          <a href="mailto:hello@novozis.com">hello@novozis.com</a>
+          <a href="https://www.linkedin.com/company/novozis" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/novozis/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="name">novozis <span>Cyber Security</span></span>
+    <span>© <span id="year">2026</span> Novozis. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Door buttons pre-select the matching option in the form.
+  var select = document.getElementById('inquiry');
+  document.querySelectorAll('[data-inquiry]').forEach(function (a) {
+    a.addEventListener('click', function () { select.value = a.getAttribute('data-inquiry'); });
+  });
+
+  // Submit without leaving the page; falls back to a normal POST if JS is off.
+  var form = document.getElementById('contact-form');
+  var status = document.getElementById('form-status');
+  var btn = document.getElementById('submit-btn');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.className = 'status';
+    status.textContent = 'Sending…';
+    btn.disabled = true;
+    var data = new FormData(form);
+    // Put the inquiry type in the email subject so it's easy to sort.
+    var label = select.options[select.selectedIndex].text;
+    data.set('subject', 'Novozis inquiry: ' + label);
+    fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.success, j: j }; }); })
+      .then(function (res) {
+        if (res.ok) {
+          form.reset();
+          status.className = 'status ok';
+          status.textContent = 'Thanks! We got your message and will be in touch soon.';
+        } else {
+          throw new Error(res.j && res.j.message);
+        }
+      })
+      .catch(function () {
+        status.className = 'status err';
+        status.textContent = 'Something went wrong. Please email us at hello@novozis.com.';
+      })
+      .finally(function () { btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
