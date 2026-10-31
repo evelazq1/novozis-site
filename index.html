@@ -119,8 +119,29 @@ footer .wrap{padding-top:32px;padding-bottom:32px;display:flex;flex-wrap:wrap;ga
 footer .name{color:#fff;font-weight:400;font-size:18px}
 footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
 
+/* announcement bar */
+.announce{display:block;background:var(--cyan);color:var(--navy);text-decoration:none;font-size:15px;font-weight:400;text-align:center;padding:10px 24px;line-height:1.4}
+.announce:hover{color:var(--navy);filter:brightness(1.05)}
+.announce u{text-underline-offset:3px}
+.announce.is-over{display:none}
+
+/* upcoming event */
+.event{background:var(--navy-2);border-bottom:1px solid var(--line-dark)}
+.event .wrap{padding-top:56px;padding-bottom:56px}
+.event-card{display:flex;flex-wrap:wrap;gap:28px 48px;align-items:center;justify-content:space-between;background:linear-gradient(0deg,rgba(92,211,230,.06),rgba(92,211,230,.06)),var(--navy);border:1px solid #2A4B76;border-radius:20px;padding:36px 40px}
+.event-text{flex:1 1 460px;min-width:0}
+.event .eyebrow{color:var(--cyan);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.event .eyebrow .pill{background:var(--cyan);color:var(--navy);border-radius:999px;padding:3px 10px;font-size:11px;letter-spacing:.1em}
+.event h2{font-weight:300;font-size:clamp(26px,3vw,36px);line-height:1.15;color:#fff;margin:0 0 10px}
+.event p{margin:0;color:var(--on-dark);font-size:17px}
+.event .meta{margin-top:12px;color:#fff;font-weight:400;font-size:16px}
+.event .meta span{color:var(--on-dark);font-weight:300}
+.event-actions{display:flex;flex-wrap:wrap;gap:12px}
+.event.is-over{display:none}
+
 @media (max-width:640px){
   nav{row-gap:12px}
+  .event-card{padding:28px 22px}
   .nav-cta{order:2}
   .nav-links{order:3;width:100%;margin-left:0;justify-content:center;gap:28px;padding-top:4px}
   .section-head{margin-bottom:40px}
@@ -133,6 +154,7 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
 </style>
 </head>
 <body>
+<a class="announce" id="announce" href="fraud-session/">Free online session, Wed Nov 18: <strong style="font-weight:500">Introduction to Personal Fraud Defense</strong>. <u>Details &amp; calendar links</u></a>
 
 <header>
   <nav class="wrap" aria-label="Main">
@@ -158,6 +180,23 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
       <div class="actions">
         <a class="btn btn-primary" href="#contact">Start a conversation</a>
         <a class="btn btn-ghost" href="#orgs">How we work with you</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="event" id="event" aria-labelledby="event-title">
+    <div class="wrap">
+      <div class="event-card">
+        <div class="event-text">
+          <div class="eyebrow"><span class="pill">Free</span> Upcoming online session</div>
+          <h2 id="event-title">Introduction to Personal Fraud Defense</h2>
+          <p>A practical 30-minute session on how today's scams work, from fake bank alerts to AI-cloned voices, and the simple steps that stop them. No sign-up needed.</p>
+          <div class="meta">Wednesday, November 18 · 5:30 pm San Miguel <span>/ 6:30 pm US Eastern · Microsoft Teams</span></div>
+        </div>
+        <div class="event-actions">
+          <a class="btn btn-primary" href="fraud-session/">Add to calendar &amp; join
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
@@ -282,6 +321,11 @@ footer .name span{font-weight:300;font-size:14px;color:#9FB5D1}
 <script>
 (function () {
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Hide the event banner once the session has ended.
+  var ev = document.getElementById('event');
+  var an = document.getElementById('announce');
+  if (Date.now() > Date.parse('2026-11-19T00:00:00Z')) { if (ev) ev.classList.add('is-over'); if (an) an.classList.add('is-over'); }
 
   // Door buttons pre-select the matching option in the form.
   var select = document.getElementById('inquiry');

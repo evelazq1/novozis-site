@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Novozis Cyber Security//Fraud Defense Session//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:fraud-defense-20261118@novozis.com
+DTSTAMP:20261031T000000Z
+DTSTART:20261118T233000Z
+DTEND:20261119T000000Z
+SUMMARY:Introduction to Personal Fraud Defense (Free)
+LOCATION:Microsoft Teams (online)
+URL:https://teams.microsoft.com/l/meetup-join/19%3ameeting_MjQwNTFmZWQtMjQz
+ MS00MWU0LWFhMTYtZGRkOTlhMjhhN2Vi%40thread.v2/0?context=%7b%22Tid%22%3a%229
+ 039eb8a-2d5d-40a6-86ba-eb1694c8c453%22%2c%22Oid%22%3a%228ab11536-5775-4137
+ -aba5-2863083b002a%22%7d
+DESCRIPTION:Free 30-minute online session by Novozis Cyber Security (novozi
+ s.com).\n\nJoin on Microsoft Teams (no download needed\, choose Continue o
+ n this browser):\nhttps://teams.microsoft.com/l/meetup-join/19%3ameeting_M
+ jQwNTFmZWQtMjQzMS00MWU0LWFhMTYtZGRkOTlhMjhhN2Vi%40thread.v2/0?context=%7b%
+ 22Tid%22%3a%229039eb8a-2d5d-40a6-86ba-eb1694c8c453%22%2c%22Oid%22%3a%228ab
+ 11536-5775-4137-aba5-2863083b002a%22%7d\n\nEvent page: https://novozis.com
+ /fraud-session/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Fraud Defense session starts in 30 minutes
+TRIGGER:-PT30M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
